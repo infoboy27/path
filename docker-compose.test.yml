@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  path-test:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: final
+    container_name: path-test
+    ports:
+      - "8081:8080"
+    volumes:
+      - ./test-config.yaml:/app/config/.config.yaml:ro
+    command: ["./path", "-config", "/app/config/.config.yaml"]
+    environment:
+      - CONFIG_PATH=/app/config/.config.yaml 
