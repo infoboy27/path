@@ -64,7 +64,7 @@ echo "📋 Copying configuration files..."
 cp -r config/* /opt/path/config/
 cp -r local/* /opt/path/local/
 cp docker-compose.prod.yml /opt/path/docker-compose.yml
-cp Dockerfile* /opt/path/
+cp Dockerfile /opt/path/
 
 # Set proper permissions
 echo "🔐 Setting proper permissions..."
