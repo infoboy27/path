@@ -44,9 +44,6 @@ ENV IMAGE_TAG=${IMAGE_TAG}
 # Copy binary from builder stage
 COPY --from=builder /go/bin/path ./
 
-# Copy configuration file
-COPY local/path/.config.yaml /app/config/.config.yaml
-
 # Set the binary as executable
 RUN chmod +x /app/path
 
